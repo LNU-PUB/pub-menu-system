@@ -12,9 +12,6 @@ import view.ConsoleUi;
  * @since 2021-09-30
  */
 public class App {
-  public String getGreeting() {
-    return "Hello World!";
-  }
 
   /**
    * The main method of the application.

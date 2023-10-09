@@ -59,15 +59,15 @@ public class MainController implements Cloneable {
    * This method is called when the user wants to add a new member.
    */
   public void addMember() {
-    // Implement your logic here
+    // Implement logic
   }
 
   /**
    * This method is called when the user wants to delete a member.
    */
   public void deleteMember() {
-    // Implement your logic here
+    // Implement logic
   }
 
-  // More methods
+  // Additional methods
 }
