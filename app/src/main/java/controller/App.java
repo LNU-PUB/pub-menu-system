@@ -22,19 +22,19 @@ public class App {
    * @param args The command line arguments.
    */
   public static void main(String[] args) {
-    ClubAdministration clubAdmin = new ClubAdministration();
-    MainMenuCommandMapper mainMapper = new MainMenuCommandMapper(clubAdmin);
-    MemberMenuCommandMapper memberMapper = new MemberMenuCommandMapper(clubAdmin);
+    MainController mainController = new MainController();
+    MainMenuCommandMapper mainMapper = new MainMenuCommandMapper(mainController);
+    MemberMenuCommandMapper memberMapper = new MemberMenuCommandMapper(mainController);
     MenuController menuController = new MenuController(mainMapper, memberMapper);
-    ConsoleUi consoleUi = new ConsoleUi(clubAdmin, menuController);
+    ConsoleUi consoleUi = new ConsoleUi(mainController, menuController);
     boolean exit = false;
 
-    clubAdmin.enterMenu(MainMenu.values());
+    mainController.enterMenu(MainMenu.values());
 
     while (!exit) {
       consoleUi.displayMenu();
       consoleUi.getUserInputAndExecute();
-      if (clubAdmin.getCurrentMenu() == null) {
+      if (mainController.getCurrentMenu() == null) {
         exit = true;
       }
     }

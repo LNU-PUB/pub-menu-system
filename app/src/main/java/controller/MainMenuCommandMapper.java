@@ -18,10 +18,10 @@ public class MainMenuCommandMapper {
   /**
    * Creates a new instance of the MainMenuCommandMapper class.
    *
-   * @param clubAdmin - The club administration instance.
+   * @param mainController - The club administration instance.
    */
-  public MainMenuCommandMapper(ClubAdministration clubAdmin) {
-    commandMap.put(MainMenu.MEMBER_MENU, () -> clubAdmin.enterMenu(MemberMenu.values()));
+  public MainMenuCommandMapper(MainController mainController) {
+    commandMap.put(MainMenu.MEMBER_MENU, () -> mainController.enterMenu(MemberMenu.values()));
     // Add more mappings
   }
 

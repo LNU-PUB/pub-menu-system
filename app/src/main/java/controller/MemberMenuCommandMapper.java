@@ -17,11 +17,11 @@ public class MemberMenuCommandMapper {
   /**
    * Creates a new instance of the MemberMenuCommandMapper class.
    *
-   * @param clubAdmin - The club administration instance.
+   * @param mainController - The club administration instance.
    */
-  public MemberMenuCommandMapper(ClubAdministration clubAdmin) {
-    commandMap.put(MemberMenu.ADDMEMBER, clubAdmin::addMember);
-    commandMap.put(MemberMenu.DELETEMEMEBER, clubAdmin::deleteMember);
+  public MemberMenuCommandMapper(MainController mainController) {
+    commandMap.put(MemberMenu.ADDMEMBER, mainController::addMember);
+    commandMap.put(MemberMenu.DELETEMEMEBER, mainController::deleteMember);
     // Add more mappings
   }
 

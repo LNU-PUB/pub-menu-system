@@ -1,10 +1,8 @@
 package view;
 
-import controller.ClubAdministration;
+import controller.MainController;
 import controller.MenuController;
 import java.util.Scanner;
-
-import model.MainMenu;
 import model.MenuOption;
 
 /**
@@ -14,18 +12,18 @@ import model.MenuOption;
  * @since 2021-09-30
  */
 public class ConsoleUi {
-  private final ClubAdministration clubAdmin;
+  private final MainController mainController;
   private final MenuController menuController;
   private final Scanner scanner = new Scanner(System.in, "UTF-8");
 
   /**
    * Creates a new instance of the ConsoleUi class.
    *
-   * @param clubAdmin      - The club administration instance.
+   * @param mainController      - The club administration instance.
    * @param menuController - The menu controller instance.
    */
-  public ConsoleUi(ClubAdministration clubAdmin, MenuController menuController) {
-    this.clubAdmin = clubAdmin.clone();
+  public ConsoleUi(MainController mainController, MenuController menuController) {
+    this.mainController = mainController.clone();
     this.menuController = menuController;
   }
 
@@ -33,7 +31,7 @@ public class ConsoleUi {
    * Displays the main menu.
    */
   public void displayMenu() {
-    MenuOption[] currentMenu = clubAdmin.getCurrentMenu();
+    MenuOption[] currentMenu = mainController.getCurrentMenu();
     if (currentMenu != null) {
       System.out.println("\n*** " + currentMenu[0].getMenuName() + " ***\n");
       for (int i = 0; i < currentMenu.length; i++) {
@@ -51,29 +49,20 @@ public class ConsoleUi {
    * Gets the user input and executes the command.
    */
   public void getUserInputAndExecute() {
-    // boolean exit = false;
     try {
       System.out.print("\nEnter your choice: ");
       String input = scanner.next();
       int choice = input.equalsIgnoreCase("q") ? 0 : Integer.parseInt(input);
-      MenuOption[] currentMenu = clubAdmin.getCurrentMenu();
+      MenuOption[] currentMenu = mainController.getCurrentMenu();
       if (choice >= 1 && choice <= currentMenu.length) {
         menuController.executeCommand(currentMenu[choice - 1]);
       } else if (choice == 0) {
-        clubAdmin.exitMenu();
+        mainController.exitMenu();
       } else {
         throw new Exception();
       }
     } catch (Exception e) {
       System.out.println("Invalid input!");
-      // exit = true;
     }
-    // return exit;
-  }
-
-  private boolean isNumber(String str) {
-    String regex = "[0-9]+";
-
-    return str.matches(regex);
   }
 }

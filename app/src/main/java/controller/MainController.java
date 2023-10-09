@@ -8,7 +8,7 @@ import model.MenuOption;
  * for managing the
  * application state and for executing the user's commands.
  */
-public class ClubAdministration implements Cloneable {
+public class MainController implements Cloneable {
   private Stack<MenuOption[]> menuStack = new Stack<>();
 
   /**
@@ -27,9 +27,9 @@ public class ClubAdministration implements Cloneable {
    * @return - A copy of the current instance.
    */
   @Override
-  public ClubAdministration clone() {
+  public MainController clone() {
     try {
-      return (ClubAdministration) super.clone();
+      return (MainController) super.clone();
     } catch (CloneNotSupportedException e) {
       throw new AssertionError(); // Can't happen
     }
