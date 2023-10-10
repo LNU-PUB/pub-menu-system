@@ -7,6 +7,8 @@ import model.MenuOption;
  * This class represents the controller of the application. It is responsible
  * for managing the
  * application state and for executing the user's commands.
+ *
+ * @since 1.0.0
  */
 public class MainController implements Cloneable {
   private Stack<MenuOption[]> menuStack = new Stack<>();

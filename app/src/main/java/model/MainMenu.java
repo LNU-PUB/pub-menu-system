@@ -3,8 +3,7 @@ package model;
 /**
  * Represents the main menu options.
  *
- * @version 1.0
- * @since 2021-09-30
+ * @since 1.0.0
  */
 public enum MainMenu implements MenuOption {
   MEMBER_MENU("Member Menu"),

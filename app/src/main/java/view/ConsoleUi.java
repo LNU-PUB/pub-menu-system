@@ -8,8 +8,7 @@ import model.MenuOption;
 /**
  * Represents the console user interface.
  *
- * @version 1.0
- * @since 2021-09-30
+ * @since 1.0.0
  */
 public class ConsoleUi {
   private final MainController mainController;

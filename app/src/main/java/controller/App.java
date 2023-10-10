@@ -9,7 +9,7 @@ import view.ConsoleUi;
  * <p>It creates the instances of the model and view classes and starts the application.
  *
  * @version 1.0
- * @since 2021-09-30
+ * @since 2023-10-09
  */
 public class App {
 

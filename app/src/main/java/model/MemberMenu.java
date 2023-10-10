@@ -3,8 +3,7 @@ package model;
 /**
  * Represents the member menu options.
  *
- * @version 1.0
- * @since 2021-09-30
+ * @since 1.0.0
  */
 public enum MemberMenu implements MenuOption {
   ADDMEMBER("Add Member"),

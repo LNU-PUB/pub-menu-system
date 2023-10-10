@@ -8,8 +8,7 @@ import model.MemberMenu;
 /**
  * Maps the member menu options to the commands that should be executed.
  *
- * @version 1.0
- * @since 2021-09-30
+ * @since 1.0.0
  */
 public class MemberMenuCommandMapper {
   private final Map<MemberMenu, Command> commandMap = new HashMap<>();

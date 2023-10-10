@@ -8,8 +8,7 @@ import model.MenuOption;
 /**
  * Maps the menu options to the commands that should be executed.
  *
- * @version 1.0
- * @since 2021-09-30
+ * @since 1.0.0
  */
 public class MenuController {
   private MainMenuCommandMapper mainMapper;
