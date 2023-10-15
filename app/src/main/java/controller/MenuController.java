@@ -1,9 +1,9 @@
 package controller;
 
-import model.Command;
-import model.MainMenu;
-import model.MemberMenu;
-import model.MenuOption;
+import view.model.Command;
+import view.model.MainMenu;
+import view.model.MemberMenu;
+import view.model.MenuOption;
 
 /**
  * Maps the menu options to the commands that should be executed.

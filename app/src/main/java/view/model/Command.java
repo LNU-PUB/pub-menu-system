@@ -1,4 +1,4 @@
-package model;
+package view.model;
 
 /**
  * Represents a command that can be executed.

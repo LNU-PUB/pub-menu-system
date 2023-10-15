@@ -2,9 +2,10 @@ package controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import model.Command;
-import model.MainMenu;
-import model.MemberMenu;
+
+import view.model.Command;
+import view.model.MainMenu;
+import view.model.MemberMenu;
 
 /**
  * Maps the main menu options to the commands that should be executed.

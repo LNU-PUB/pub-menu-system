@@ -2,8 +2,9 @@ package view;
 
 import controller.MainController;
 import controller.MenuController;
+import view.model.MenuOption;
+
 import java.util.Scanner;
-import model.MenuOption;
 
 /**
  * Represents the console user interface.

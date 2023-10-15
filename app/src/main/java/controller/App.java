@@ -1,7 +1,7 @@
 package controller;
 
-import model.MainMenu;
 import view.ConsoleUi;
+import view.model.MainMenu;
 
 /**
  * The main class of the application.

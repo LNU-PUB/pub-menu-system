@@ -2,8 +2,9 @@ package controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import model.Command;
-import model.MemberMenu;
+
+import view.model.Command;
+import view.model.MemberMenu;
 
 /**
  * Maps the member menu options to the commands that should be executed.

@@ -1,7 +1,8 @@
 package controller;
 
 import java.util.Stack;
-import model.MenuOption;
+
+import view.model.MenuOption;
 
 /**
  * This class represents the controller of the application. It is responsible

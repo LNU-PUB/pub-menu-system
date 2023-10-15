@@ -1,4 +1,4 @@
-package model;
+package view.model;
 
 /**
  * Represents a menu option.
